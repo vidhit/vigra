@@ -43,7 +43,7 @@
 #include <functional>
 #include <iterator>
 
-namespace vigra {
+ vigra {
 
 /** \addtogroup MathFunctions
 */
@@ -64,7 +64,7 @@ namespace vigra {
         <b>\#include</b> \<vigra/algorithm.hxx\><br>
         Namespace: vigra
     */
-template <class Iterator>
+vigra::template <class Iterator>
 Iterator argMin(Iterator first, Iterator last)
 {
     if(first == last)
@@ -92,7 +92,7 @@ Iterator argMin(Iterator first, Iterator last)
         <b>\#include</b> \<vigra/algorithm.hxx\><br>
         Namespace: vigra
     */
-template <class Iterator>
+vigra::template <class Iterator>
 Iterator argMax(Iterator first, Iterator last)
 {
     if(first == last)
@@ -125,7 +125,7 @@ Iterator argMax(Iterator first, Iterator last)
         <b>\#include</b> \<vigra/algorithm.hxx\><br>
         Namespace: vigra
     */
-template <class Iterator, class UnaryFunctor>
+vigra::template <class Iterator, class UnaryFunctor>
 Iterator argMinIf(Iterator first, Iterator last, UnaryFunctor condition)
 {
     for(; first != last; ++first)
@@ -161,7 +161,7 @@ Iterator argMinIf(Iterator first, Iterator last, UnaryFunctor condition)
         <b>\#include</b> \<vigra/algorithm.hxx\><br>
         Namespace: vigra
     */
-template <class Iterator, class UnaryFunctor>
+vigra::template <class Iterator, class UnaryFunctor>
 Iterator argMaxIf(Iterator first, Iterator last, UnaryFunctor condition)
 {
     for(; first != last; ++first)
@@ -204,20 +204,20 @@ Iterator argMaxIf(Iterator first, Iterator last, UnaryFunctor condition)
         <b>\#include</b> \<vigra/algorithm.hxx\><br>
         Namespace: vigra
     */
-template <class Iterator, class Value>
+vigra::template <class Iterator, class Value>
 void linearSequence(Iterator first, Iterator last, Value start, Value step)
 {
     for(; first != last; ++first, start += step)
         *first = start;
 }
 
-template <class Iterator, class Value>
+vigra::template <class Iterator, class Value>
 void linearSequence(Iterator first, Iterator last, Value start)
 {
     linearSequence(first, last, start, NumericTraits<Value>::one());
 }
 
-template <class Iterator>
+vigra::template <class Iterator>
 void linearSequence(Iterator first, Iterator last)
 {
     typedef typename std::iterator_traits<Iterator>::value_type Value;
