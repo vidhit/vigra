@@ -43,7 +43,7 @@
 #include <functional>
 #include <iterator>
 
-namespace vigra {
+ vigra {
 
 /** \addtogroup MathFunctions
 */
@@ -65,7 +65,7 @@ namespace vigra {
         Namespace: vigra
     */
 template <class Iterator>
-Iterator argMin(Iterator first, Iterator last)
+vigra::Iterator argMin(Iterator first, Iterator last)
 {
     if(first == last)
         return last;
@@ -93,7 +93,7 @@ Iterator argMin(Iterator first, Iterator last)
         Namespace: vigra
     */
 template <class Iterator>
-Iterator argMax(Iterator first, Iterator last)
+vigra::Iterator argMax(Iterator first, Iterator last)
 {
     if(first == last)
         return last;
@@ -126,7 +126,7 @@ Iterator argMax(Iterator first, Iterator last)
         Namespace: vigra
     */
 template <class Iterator, class UnaryFunctor>
-Iterator argMinIf(Iterator first, Iterator last, UnaryFunctor condition)
+vigra::Iterator argMinIf(Iterator first, Iterator last, UnaryFunctor condition)
 {
     for(; first != last; ++first)
         if(condition(*first))
@@ -162,7 +162,7 @@ Iterator argMinIf(Iterator first, Iterator last, UnaryFunctor condition)
         Namespace: vigra
     */
 template <class Iterator, class UnaryFunctor>
-Iterator argMaxIf(Iterator first, Iterator last, UnaryFunctor condition)
+vigra::Iterator argMaxIf(Iterator first, Iterator last, UnaryFunctor condition)
 {
     for(; first != last; ++first)
         if(condition(*first))
@@ -214,7 +214,7 @@ void linearSequence(Iterator first, Iterator last, Value start, Value step)
 template <class Iterator, class Value>
 void linearSequence(Iterator first, Iterator last, Value start)
 {
-    linearSequence(first, last, start, NumericTraits<Value>::one());
+   vigra::linearSequence(first, last, start, NumericTraits<Value>::one());
 }
 
 template <class Iterator>
@@ -222,7 +222,7 @@ void linearSequence(Iterator first, Iterator last)
 {
     typedef typename std::iterator_traits<Iterator>::value_type Value;
     
-    linearSequence(first, last, NumericTraits<Value>::zero());
+    vigra::linearSequence(first, last, NumericTraits<Value>::zero());
 }
 
 /** \brief Call an analyzing functor at every element of a sequence.
